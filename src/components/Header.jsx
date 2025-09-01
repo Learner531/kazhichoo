@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { clearCart } from '../store/cartSlice';
 import { toggleDarkMode } from '../store/themeSlice';
-import { showLoginModal, hideLoginModal, login, logout } from '../store/UserSlice';
+import { showLoginModal, hideLoginModal, login, logout } from '../store/userSlice';
 
 export default function Header({ searchQuery, setSearchQuery, selectedFilters, setSelectedFilters, isCartOpen, setIsCartOpen }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

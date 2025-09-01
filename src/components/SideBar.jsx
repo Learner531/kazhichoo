@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeItem, updateQuantity, clearCart } from '../store/cartSlice';
-import { showLoginModal } from '../store/UserSlice';
+import { showLoginModal } from '../store/userSlice';
 
 const SideBar = ({ isCartOpen, setIsCartOpen }) => {
   const dispatch = useDispatch();
