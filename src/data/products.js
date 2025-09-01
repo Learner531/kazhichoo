@@ -6,7 +6,7 @@ const products = [
       category: "Breakfast",
       type: "Veg",
           price: "₹40",
-    image: "src/assets/images/puttu.jpg"
+            image: "puttu.jpg"
     },
     {
       id: 2,
@@ -14,7 +14,7 @@ const products = [
       category: "Breakfast",
       type: "Non-veg",
       price: "₹50",
-      image: "src/assets/images/appam egg.jpg"
+              image: "appam egg.jpg"
     },
     {
       id: 3,
@@ -22,7 +22,7 @@ const products = [
       category: "Breakfast",
       type: "Veg",
       price: "₹45",
-      image: "src/assets/images/Idiyappam with Vegetable Stew.jpg"
+              image: "Idiyappam with Vegetable Stew.jpg"
     },
     {
       id: 4,
@@ -30,7 +30,7 @@ const products = [
       category: "Breakfast",
       type: "Veg",
       price: "₹35",
-      image: "src/assets/images/Masala Dosa with Sambar & Chutney.jpg"
+              image: "Masala Dosa with Sambar & Chutney.jpg"
     },
   
     // LUNCH
@@ -40,7 +40,7 @@ const products = [
       category: "Lunch",
       type: "Veg",
       price: "₹120",
-      image: "src/assets/images/Kerala Sadhya (Veg Thali).jpg"
+              image: "Kerala Sadhya (Veg Thali).jpg"
     },
     {
       id: 6,
@@ -48,7 +48,7 @@ const products = [
       category: "Lunch",
       type: "Non-veg",
       price: "₹150",
-      image: "src/assets/images/Fish Curry Meal.jpg"
+              image: "Fish Curry Meal.jpg"
     },
     {
       id: 7,
@@ -56,7 +56,7 @@ const products = [
       category: "Lunch",
       type: "Non-veg",
       price: "₹140",
-      image: "src/assets/images/Chicken Curry with Rice.jpg"
+              image: "Chicken Curry with Rice.jpg"
     },
     {
       id: 8,
@@ -64,7 +64,7 @@ const products = [
       category: "Lunch",
       type: "Veg",
       price: "₹90",
-      image: "src/assets/images/Vegetable Kurma with Parotta.jpg"
+              image: "Vegetable Kurma with Parotta.jpg"
     },
   
     // DINNER
@@ -74,7 +74,7 @@ const products = [
       category: "Dinner",
       type: "Non-veg",
       price: "₹160",
-      image: "src/assets/images/Malabar Parotta with Beef Curry.jpg"
+              image: "Malabar Parotta with Beef Curry.jpg"
     },
     {
       id: 10,
@@ -82,7 +82,7 @@ const products = [
       category: "Dinner",
       type: "Non-veg",
       price: "₹120",
-      image: "src/assets/images/Chapati with Chicken Curry.jpg"
+              image: "Chapati with Chicken Curry.jpg"
     },
     {
       id: 11,
@@ -90,7 +90,7 @@ const products = [
       category: "Dinner",
       type: "Non-veg",
       price: "₹100",
-      image: "src/assets/images/Kappa (Tapioca) with Fish Curry.jpg"
+              image: "Kappa (Tapioca) with Fish Curry.jpg"
     },
     {
       id: 12,
@@ -98,7 +98,7 @@ const products = [
       category: "Dinner",
       type: "Veg",
       price: "₹80",
-      image: "src/assets/images/Vegetable Kurma with Chapati.jpg"
+              image: "Vegetable Kurma with Chapati.jpg"
     },
   
     // SNACKS & DRINKS
@@ -108,7 +108,7 @@ const products = [
       category: "Snacks",
       type: "Veg",
       price: "₹25",
-      image: "src/assets/images/Pazham Pori (Banana Fritters).jpg"
+              image: "Pazham Pori (Banana Fritters).jpg"
     },
     {
       id: 14,
@@ -116,7 +116,7 @@ const products = [
       category: "Snacks",
       type: "Veg",
       price: "₹20",
-      image: "src/assets/images/Uzhunnu Vada with Coconut Chutney.jpg"
+              image: "Uzhunnu Vada with Coconut Chutney.jpg"
     },
     {
       id: 15,
@@ -124,7 +124,7 @@ const products = [
       category: "Snacks",
       type: "Veg",
       price: "₹30",
-      image: "src/assets/images/Ela Ada (Steamed Sweet Rice Cake).jpg"
+              image: "Ela Ada (Steamed Sweet Rice Cake).jpg"
     },
     {
       id: 16,
@@ -132,7 +132,7 @@ const products = [
       category: "Snacks",
       type: "Veg",
       price: "₹12",
-      image: "src/assets/images/Kerala Tea (Chaya).jpg"
+              image: "Kerala Tea (Chaya).jpg"
     },
     {
       id: 17,
@@ -140,7 +140,7 @@ const products = [
       category: "Snacks",
       type: "Veg",
       price: "₹15",
-      image: "src/assets/images/Filter Coffee.jpg"
+              image: "Filter Coffee.jpg"
     },
   
     // SWEETS / DESSERTS
@@ -150,7 +150,7 @@ const products = [
       category: "Dessert",
       type: "Veg",
       price: "₹60",
-      image: "src/assets/images/Ada Pradhaman (Payasam).jpg"
+              image: "Ada Pradhaman (Payasam).jpg"
     },
     {
       id: 19,
@@ -158,7 +158,7 @@ const products = [
       category: "Dessert",
       type: "Veg",
       price: "₹35",
-      image: "src/assets/images/Unniyappam (Sweet Rice Snack).jpg"
+              image: "Unniyappam (Sweet Rice Snack).jpg"
     },
     {
       id: 20,
@@ -166,7 +166,7 @@ const products = [
       category: "Dessert",
       type: "Veg",
       price: "₹70",
-      image: "src/assets/images/Palada Payasam.jpg"
+              image: "Palada Payasam.jpg"
     }
   ];
   

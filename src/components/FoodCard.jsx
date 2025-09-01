@@ -12,7 +12,7 @@ export default function FoodCard({product}) {
     return (
         <div className="border border-kerala-green-100 dark:border-kerala-dark-palm rounded-lg bg-white dark:bg-kerala-charcoal shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-300 overflow-hidden transform">
             <img 
-                src={product.image} 
+                src={`/images/${product.image}`} 
                 alt={product.name} 
                 className="w-full h-48 object-cover"
             />
