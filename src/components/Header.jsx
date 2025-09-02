@@ -83,7 +83,7 @@ export default function Header({ searchQuery, setSearchQuery, selectedFilters, s
     };
 
     const handleLogin = () => {
-        if (username === "user" && password === "12345678") {
+        if (username === "user" || username === "admin" && password === "12345678") {
             setLoginError(''); // Clear error
             dispatch(login({username, password}));
         } 
@@ -219,12 +219,20 @@ export default function Header({ searchQuery, setSearchQuery, selectedFilters, s
                         </button>
 
                         {/* User Icon - Only show when logged in */}
-                        {(isLoggedIn || isAdminLoggedIn) && (
+                        {(isLoggedIn) && (
                             <Link to="/profile" className="relative flex items-center space-x-2 px-4 py-2 text-kerala-deep-green dark:text-kerala-muted-gold hover:text-kerala-green-700 dark:hover:text-kerala-banana-yellow hover:bg-kerala-green-50 dark:hover:bg-kerala-dark-palm rounded-lg transition-colors">
                                 <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                 </svg>
                                 <span className="font-medium">Profile</span>
+                            </Link>
+                        )}
+                        {(isAdminLoggedIn) && (
+                            <Link to="/admin" className="relative flex items-center space-x-2 px-4 py-2 text-kerala-deep-green dark:text-kerala-muted-gold hover:text-kerala-green-700 dark:hover:text-kerala-banana-yellow hover:bg-kerala-green-50 dark:hover:bg-kerala-dark-palm rounded-lg transition-colors">
+                                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                                <span className="font-medium">Admin Panel</span>
                             </Link>
                         )}
 
@@ -357,7 +365,7 @@ export default function Header({ searchQuery, setSearchQuery, selectedFilters, s
                             </button>
 
                             {/* Mobile User Profile Link - Only show when logged in */}
-                            {(isLoggedIn || isAdminLoggedIn) && (
+                            {(isLoggedIn) && (
                                 <Link to="/profile" className="flex items-center justify-center space-x-2 w-full px-4 py-3 text-kerala-deep-green hover:text-kerala-green-700 hover:bg-kerala-green-50 rounded-lg transition-colors">
                                     <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -365,6 +373,15 @@ export default function Header({ searchQuery, setSearchQuery, selectedFilters, s
                                     <span className="font-medium">Profile</span>
                                 </Link>
                             )}
+
+{(isAdminLoggedIn) && (
+                            <Link to="/admin" className="relative flex items-center space-x-2 px-4 py-2 text-kerala-deep-green dark:text-kerala-muted-gold hover:text-kerala-green-700 dark:hover:text-kerala-banana-yellow hover:bg-kerala-green-50 dark:hover:bg-kerala-dark-palm rounded-lg transition-colors">
+                                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                                <span className="font-medium">Admin Panel</span>
+                            </Link>
+                        )}
 
                             {/* Mobile Dark Mode Toggle */}
                             <button
@@ -415,7 +432,7 @@ export default function Header({ searchQuery, setSearchQuery, selectedFilters, s
                 <h2 className="text-2xl font-bold text-kerala-deep-green dark:text-kerala-muted-gold mb-4">
         Login
       </h2>
-      <input type="text" placeholder="user" className="w-full p-2 border border-kerala-green-100 dark:border-kerala-dark-palm rounded-lg mb-4" value={username} onChange={(e) => setUsername(e.target.value)} />
+      <input type="text" placeholder="user / admin" className="w-full p-2 border border-kerala-green-100 dark:border-kerala-dark-palm rounded-lg mb-4" value={username} onChange={(e) => setUsername(e.target.value)} />
       <input type="password" placeholder="12345678" className="w-full p-2 border border-kerala-green-100 dark:border-kerala-dark-palm rounded-lg mb-4" value={password} onChange={(e) => setPassword(e.target.value)} />
       {loginError && <p className="text-red-500 mb-4">{loginError}</p>}
       <button className="w-full bg-kerala-banana-yellow hover:bg-kerala-muted-gold text-kerala-deep-green px-6 py-3 rounded-lg font-semibold transition-colors" onClick={handleLogin}>

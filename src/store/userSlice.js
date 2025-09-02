@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+
+
 const getInitialUser = () => {
     const savedUser = localStorage.getItem('user');
     return savedUser ? JSON.parse(savedUser) : {
@@ -29,18 +31,25 @@ const userSlice = createSlice({
                 localStorage.setItem('user', JSON.stringify(state));
             }
             else if (newUser.username=="admin"&&newUser.password=="12345678") {
+                console.log("Admin logged in");
                 state.isAdminLoggedIn = true;
                 state.showLoginModal = false;
                 state.username = newUser.username;
                 state.userData = { name: newUser.username };
+            
                 localStorage.setItem('user', JSON.stringify(state));
             }
+            else{
+                console.log("Invalid credentials");
+                //invalid creds, dont change state
+                return;}
         },
         logout: (state) => {
             state.isLoggedIn = false;
             state.isAdminLoggedIn = false;  
             state.userData = null;
             state.username = '';
+    
             localStorage.removeItem('user');
         },
         showLoginModal: (state) => {

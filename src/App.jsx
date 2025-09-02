@@ -10,6 +10,8 @@ import Contact from './pages/Contact';
 import Profile from './pages/Profile';
 import Error from './pages/Error';
 import ProtectedRoute from './components/ProtectedRoute';
+import Admin from './pages/Admin';
+import AdminRoute from './components/AdminRoute';
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -41,6 +43,14 @@ function App() {
                 <ProtectedRoute>
                   <Profile />
                 </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/admin" 
+              element={
+                <AdminRoute>
+                  <Admin />
+                </AdminRoute>
               } 
             />
             
