@@ -9,6 +9,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Profile from './pages/Profile';
 import Error from './pages/Error';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -34,7 +35,14 @@ function App() {
             <Route path="/menu" element={<Menu />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route 
+              path="/profile" 
+              element={
+                <ProtectedRoute>
+                  <Profile />
+                </ProtectedRoute>
+              } 
+            />
             
             <Route path="*" element={<Error />} />
           </Routes>
